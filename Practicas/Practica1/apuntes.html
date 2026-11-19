@@ -1,0 +1,406 @@
+nombre = "Juan"
+edad = 25
+altura = 1.75
+es estudiante = True
+
+a = 10
+b = 3
+suma = a + b   # 13
+resta = a - b    # 7
+multiplicacion = a * b    # 30
+division = a / b   # 3.333333333
+división_entera = a // b   # 3
+modulo = a % b   # 1
+exponenciacion = a ** b   # 1000
+igual = a == b   # False
+diferente = a != b   # True
+mayor que = a > b   # True
+menor que = a < b   # False
+mayor o igual = a >= b   # True
+menor o igual = a <= b   # False
+resultado_and = (a > 5) and (b < 5)   # True
+resultado_or = (a > 15) or (b < 5)   # True
+resultado_not = not (a > 5)   # False
+python tiene reglas secuenciales parecidas a la aritmetica
+calificacion = 85
+
+
+if calificacion >= 90:
+   print ("Excelente")
+
+elif calificacion >= 80:
+   print ("Muy bueno")
+
+elif calificacion >= 70:
+   print ("Bueno")
+
+else:
+   print ("Necesita mejorar")
+
+
+BUCLES 
+frutas = ["manzana", "banana", "naranja"]
+for fruta in frutas:
+    print(fruta)
+contador = 0
+
+
+while contador < 5:
+
+    print(contador)
+    contador += 1
+
+PODEMOS USAR:   
+    *pass
+    * break
+    * continue
+
+LISTAS
+frutas = ["manzana", "banana", "naranja"]
+Para acceder a los elementos de una lista, utiliza el índice del elemento entre corchetes. Los índices comienzan desde 0.
+
+print(frutas[0])  # Imprime "manzana"
+print(frutas[1])  # Imprime "banana"
+print(frutas[2])  # Imprime "naranja"
+También puedes acceder a los elementos desde el final de la lista utilizando índices negativos. El índice -1 representa el último elemento, -2 representa el penúltimo, y así sucesivamente.
+
+print(frutas[-1])  # Imprime "naranja"
+print(frutas[-2])  # Imprime "banana"
+print(frutas[-3])  # Imprime "manzana"
+ Métodos de listas
+Las listas en Python tienen varios métodos incorporados que nos permiten manipular y modificar los elementos de la lista. Algunos métodos comunes son:
+
+append(elemento): agrega un elemento al final de la lista.
+insert(indice, elemento): inserta un elemento en una posición específica de la lista.
+remove(elemento): elimina la primera aparición de un elemento en la lista.
+pop(indice): elimina y devuelve el elemento en una posición específica de la lista.
+sort(): ordena los elementos de la lista en orden ascendente.
+reverse(): invierte el orden de los elementos en la lista.
+frutas = ["manzana", "banana", "naranja"]
+
+
+frutas.append("pera")
+print(frutas)  # Imprime ["manzana", "banana", "naranja", "pera"]
+
+
+frutas.insert(1, "uva")
+print(frutas)  # Imprime ["manzana", "uva", "banana", "naranja", "pera"]
+
+
+frutas.remove("banana")
+print(frutas)  # Imprime ["manzana", "uva", "naranja", "pera"]
+
+
+fruta_eliminada = frutas.pop(2)
+print(frutas)  # Imprime ["manzana", "uva", "pera"]
+print(fruta_eliminada)  # Imprime "naranja"
+
+
+frutas.sort()
+print(frutas)  # Imprime ["manzana", "pera", "uva"]
+
+
+frutas.reverse()
+print(frutas)  # Imprime ["uva", "pera", "manzana"]
+Listas de comprensión
+Las listas de comprensión son una forma concisa de crear nuevas listas basadas en una secuencia existente. Permiten filtrar y transformar los elementos de una lista en una sola línea de código.
+
+nueva_lista = [expresion for elemento in secuencia if condicion]
+Ejemplo:
+
+numeros = [1, 2, 3, 4, 5]
+cuadrados = [x ** 2 for x in numeros if x % 2 == 0]
+print(cuadrados)  # Imprime [4, 16]
+En este ejemplo, se crea una nueva lista llamada cuadrados, que contiene los cuadrados de los números pares de la lista numeros. La expresión x ** 2 eleva cada elemento al cuadrado, y la condición if x % 2 == 0 filtra solo los números pares.
+
+TUPLAS:
+Creación y acceso
+Para crear una tupla, encierra los elementos entre paréntesis:
+
+punto = (3, 4)
+Para acceder a los elementos de una tupla, utiliza el índice del elemento entre corchetes, similar a las listas:
+
+print(punto[0])  # Imprime 3
+
+print(punto[1])  # Imprime 4
+A diferencia de las listas, las tuplas son inmutables, lo que significa que no se pueden modificar una vez creadas. No se pueden
+agregar, eliminar o cambiar elementos en una tupla existente.`
+Métodos de tuplas
+Aunque las tuplas son inmutables, Python proporciona varios métodos útiles para trabajar con ellas:
+
+count(elemento): devuelve el número de veces que aparece un elemento en la tupla. 
+index(elemento): devuelve el índice de la primera aparición de un elemento en la tupla. Opcionalmente, se puede especificar el inicio y fin de la búsqueda. 
+len(tupla): aunque no es un método de tupla propiamente dicho, esta función incorporada devuelve la longitud de la tupla.
+mi_tupla = (1, 2, 3, 2, 4, 2)
+
+
+print (mi_tupla.index(2))   # Salida: 1
+
+print (mi_tupla.index(2, 2))   #Salida: 3
+
+print (mi_tupla.index(2, 2, 4))   #Salida: 3
+
+Creación y acceso
+Para crear un diccionario, utiliza llaves y separa las claves y valores con dos puntos.
+
+persona = {"nombre": "Juan", "edad": 25, "ciudad": "Madrid"}
+*DICCIONARIOS 
+Para acceder a los valores de un diccionario, utiliza la clave correspondiente entre corchetes:
+
+print(persona["nombre"])  # Imprime "Juan"
+print(persona["edad"])    # Imprime 25
+print(persona["ciudad"])  # Imprime "Madrid"
+Métodos de diccionarios
+Los diccionarios en Python tienen varios métodos incorporados para manipular y acceder a los elementos. Algunos métodos comunes son:
+
+keys(): devuelve una vista de todas las claves del diccionario.
+values(): devuelve una vista de todos los valores del diccionario.
+items(): devuelve una vista de todos los pares clave-valor del diccionario.
+update(otro_diccionario): actualiza el diccionario con los pares clave-valor de otro diccionario.
+Ejemplo:
+
+persona = {"nombre": "Juan", "edad": 25, "ciudad": "Madrid"}
+
+
+print(persona.keys())    # Imprime dict_keys(["nombre", "edad", "ciudad"])
+print(persona.values())  # Imprime dict_values(["Juan", 25, "Madrid"])
+print(persona.items())   # Imprime dict_items([("nombre", "Juan"), ("edad", 25), ("ciudad", "Madrid")])
+
+
+persona.update({"profesion": "Ingeniero"})
+print(persona)  # Imprime {"nombre": "Juan", "edad": 25, "ciudad": "Madrid", "profesion": "Ingeniero"}
+ 
+ CONJUNTOS 
+Creación y operaciones básicas
+Para crear un conjunto, utiliza llaves o la función set():
+
+frutas = {"manzana", "banana", "naranja"}
+numeros = set([1, 2, 3, 4, 5])
+Los conjuntos admiten operaciones matemáticas de conjuntos, como la unión (|), la intersección (&), la diferencia (-) y la diferencia simétrica (^).
+
+conjunto1 = {1, 2, 3}
+conjunto2 = {3, 4, 5}
+
+
+union = conjunto1 | conjunto2
+print(union)  # Imprime {1, 2, 3, 4, 5}
+
+
+interseccion = conjunto1 & conjunto2
+print(interseccion)  # Imprime {3}
+
+
+diferencia = conjunto1 - conjunto2
+print(diferencia)  # Imprime {1, 2}
+
+
+diferencia_simetrica = conjunto1 ^ conjunto2
+print(diferencia_simetrica)  # Imprime {1, 2, 4, 5}
+ 
+
+Métodos de conjuntos
+Los conjuntos en Python tienen varios métodos incorporados para manipular y acceder a los elementos. Algunos métodos comunes son:
+
+add(elemento): agrega un elemento al conjunto.
+remove(elemento): elimina un elemento del conjunto. Si el elemento no existe, genera un error.
+discard(elemento): elimina un elemento del conjunto si está presente. Si el elemento no existe, no hace nada.
+clear(): elimina todos los elementos del conjunto.
+Ejemplo:
+
+frutas = {"manzana", "banana", "naranja"}
+
+
+frutas.add("pera")
+print(frutas)  # Imprime {"manzana", "banana", "naranja", "pera"}
+
+
+frutas.remove("banana")
+print(frutas)  # Imprime {"manzana", "naranja", "pera"}
+
+
+frutas.discard("uva")
+print(frutas)  # Imprime {"manzana", "naranja", "pera"}
+
+
+frutas.clear()
+print(frutas)  # Imprime set()
+
+
+FUNCIONES
+Documentación de funciones (docstrings)
+Es una buena práctica documentar nuestras funciones utilizando docstrings. Los docstrings son cadenas de texto que describen el propósito, los parámetros y el valor de retorno de una función. Se colocan inmediatamente después de la definición de la función y se encierran entre triples comillas dobles.
+
+def area_rectangulo(base, altura):
+    """
+    Calcula el área de un rectángulo.
+
+
+    Args:
+        base (float): La base del rectángulo.
+        altura (float): La altura del rectángulo.
+
+
+    Returns:
+        float: El área del rectángulo.
+    """
+    return base * altura
+def suma(a, b):
+    return a + b
+
+Valores de retorno
+Las funciones pueden devolver valores utilizando la palabra clave return. El valor de retorno puede ser utilizado por el código que llama a la función. 
+resultado = suma(3, 4)
+print(resultado)  # Imprime 7
+ 
+
+Funciones anónimas (lambda)
+Python permite crear funciones anónimas o funciones lambda, que son funciones sin nombre definidas en una sola línea. Se utilizan comúnmente para funciones pequeñas y concisas.
+
+cuadrado = lambda x: x ** 2
+print(cuadrado(5))  # Imprime 25
+
+Funciones con número variable de argumentos
+Python permite definir funciones que acepten un número variable de argumentos. Esto se logra utilizando el operador * antes del nombre del parámetro.
+
+def suma_variable(*numeros):
+    total = 0
+    for numero in numeros:
+        total += numero
+    return total
+
+
+print(suma_variable(1, 2, 3))  # Imprime 6
+print(suma_variable(4, 5, 6, 7))  # Imprime 22
+
+
+Error de sintaxis (SyntaxError)
+Ocurre cuando el código no sigue las reglas de sintaxis de Python, como olvidar dos puntos después de una declaración de función o un bucle.
+def mi_funcion() # Falta los dos puntos
+    print("Hola")
+
+ERRORES DE COMPILACION
+
+Error de nombre (NameError)
+Ocurre cuando se hace referencia a una variable o función que no ha sido definida.
+
+print(variable_no_definida)
+ 
+
+Error de tipo (TypeError)
+Ocurre cuando se realiza una operación con tipos de datos incompatibles, como intentar sumar un número y una cadena.
+resultado = 5 + "10"
+ 
+
+Error de índice (IndexError)
+Ocurre cuando se intenta acceder a un índice fuera del rango válido de una lista o secuencia.
+lista = [1, 2, 3]
+print(lista[3])  # El índice 3 está fuera del rango
+
+
+El manejo de excepciones nos permite capturar y manejar errores de manera controlada utilizando las declaraciones try, except y opcionalmente finally.
+
+ 
+
+Try
+El bloque try contiene el código que puede generar una excepción. Si ocurre una excepción dentro del bloque try, el flujo de ejecución se transfiere al bloque except correspondiente.
+
+try:
+    # Código que puede generar una excepción
+    resultado = 10 / 0  # División por cero
+    print(resultado)
+except ZeroDivisionError:
+    print("Error: División por cero")
+ 
+
+Except
+El bloque except especifica el tipo de excepción que se desea capturar y manejar. Puedes tener múltiples bloques except para manejar diferentes tipos de excepciones.
+
+try:
+    # Código que puede generar una excepción
+    resultado = 10 / 0  # División por cero
+    print(resultado)
+except ZeroDivisionError:
+    print("Error: División por cero")
+except ValueError:
+    print("Error: Valor inválido")
+ 
+
+Finally
+El bloque finally es opcional y se ejecuta siempre, independientemente de si ocurrió una excepción o no. Se utiliza comúnmente para  tareas de limpieza o liberación de recursos.
+
+try:
+    # Código que puede generar una excepción
+    archivo = open("archivo.txt", "r")
+    #  operaciones con el archivo
+except FileNotFoundError:
+    print("Error: Archivo no encontrado")
+finally:
+    archivo.close()  # Cerrar el archivo siempre, incluso si ocurre una excepción
+    Además de las excepciones incorporadas en Python, también puedes crear tus propias excepciones personalizadas. Esto es útil cuando deseas manejar situaciones específicas de tu programa.
+
+Para crear una excepción personalizada, debes crear una clase que herede de la clase base Exception o de una de sus subclases.
+
+def funcion():
+    # Código que puede generar una excepción personalizada
+    if condicion:
+        raise Exception("Descripción del error")
+
+
+try:
+    funcion()
+except Exception as e:
+    print(f"Error: {str(e)}")
+En este ejemplo, se define una función llamada funcion(). Dentro de la función, se verifica una condición y, si se cumple, se genera una excepción utilizando la declaración raise. En lugar de crear una clase personalizada, se utiliza directamente la clase base Exception para generar la excepción.
+
+ 
+
+Luego, se utiliza un bloque try-except para capturar y manejar la excepción. La variable e se utiliza para acceder a la descripción del error proporcionada al generar la excepción.
+
+El manejo de errores y excepciones es una parte fundamental de la programación en Python. Te permite manejar situaciones inesperadas de manera controlada y evitar que tu programa se bloquee o se detenga abruptamente.
+
+Cuando ocurre un error en tu código, Python genera una excepción. Al utilizar bloques try-except, puedes capturar y manejar estas excepciones de manera adecuada. Puedes especificar diferentes bloques except para manejar distintos tipos de excepciones y  acciones específicas en cada caso.€
+
+Entrada de datos del usuario
+Para obtener información del usuario durante la ejecución del programa, podemos utilizar la función input(). Esta función muestra un mensaje en la pantalla y espera a que el usuario ingrese un valor.
+
+nombre = input("Ingresa tu nombre: ")
+edad = input("Ingresa tu edad: ")
+
+
+print("Hola, " + nombre + "!")
+print("Tienes " + edad + " años.")
+En este ejemplo, se solicita al usuario que ingrese su nombre y edad utilizando la función input(). Los valores ingresados se almacenan en las variables nombre y edad, respectivamente. Luego, se utilizan estas variables para mostrar un saludo personalizado en la pantalla.
+edad = int(input("Ingresa tu edad: "))
+
+
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
+    Salida de datos
+Para mostrar información en la pantalla, utilizamos la función print(). Esta función toma uno o más argumentos y los muestra en la consola.
+
+Podemos utilizar la f-string (formateo de cadenas) para incrustar variables directamente dentro de una cadena de texto.
+
+nombre = "Juan"
+edad = 25
+
+
+print(f"Hola, mi nombre es {nombre} y tengo {edad} años.")
+Lectura de archivos
+Para leer el contenido de un archivo, primero debemos abrirlo utilizando la función open() en modo de lectura ("r"). Luego, podemos leer el contenido del archivo utilizando métodos como read() o readlines().
+
+archivo = open("datos.txt", "r")
+contenido = archivo.read()
+print(contenido)
+archivo.close()
+En este ejemplo, se abre el archivo "datos.txt" en modo de lectura utilizando open(). Luego, se lee todo el contenido del archivo utilizando el método read() y se almacena en la variable contenido. Finalmente, se muestra el contenido en la pantalla y se cierra el archivo utilizando el método close().
+
+ 
+
+Escritura de archivos
+Para escribir datos en un archivo, lo abrimos en modo de escritura ("w") utilizando la función open(). Si el archivo no existe, se creará automáticamente. Si el archivo ya existe, su contenido se sobrescribirá.
+
+archivo = open("datos.txt", "w")
+archivo.write("Hola, mundo!")
+archivo.close()
