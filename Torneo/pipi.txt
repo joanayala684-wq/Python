@@ -1,0 +1,115 @@
+CHULETA DE SUPERVIVENCIA PARA EL EXAMEN (Mentalidad Java -> Python)
+
+====================================================================
+
+
+
+1. OJO CON LA INDENTACION (SANGRIA)
+
+   - En Python no hay llaves {}. Los bloques se definen por espacios.
+
+   - Si metes una linea un tabulador mas adentro o mas afuera, cambias
+
+     el flujo del programa.
+
+   - Revisa siempre donde cierra cada if, for y while antes de entregar.
+
+
+
+--------------------------------------------------------------------
+
+
+
+2. NO MODIFIQUES UNA LISTA MIENTRAS LA RECORRES
+
+   - Si haces:
+
+       for x in lista:
+
+           lista.remove(x)  # o lista.pop()
+
+     Python se salta elementos porque los indices se corren.
+
+   - SOLUCION: Crea siempre una lista auxiliar (nueva_lista = []) y ve
+
+     metiendo ahi los elementos que sobrevivan.
+
+
+
+--------------------------------------------------------------------
+
+
+
+3. EL CLASICO IndexError EN random.randint()
+
+   - Recuerda que random.randint(0, len(lista) - 1) SIEMPRE lleva el "- 1".
+
+   - A diferencia de Java o range(), randint() incluye ambos extremos.
+
+   - Si te olvidas el "- 1", en algun momento saldra fuera de rango y petara.
+
+
+
+--------------------------------------------------------------------
+
+
+
+4. DIFERENCIA RAPIDA ENTRE .sort() Y sorted()
+
+   - lista.sort() -> Modifica la lista original y devuelve None.
+
+     (NUNCA hagas x = lista.sort(), porque x valdra None).
+
+   - nueva = sorted(lista) -> Crea una copia ordenada sin tocar la original.
+
+     (Sirve tambien para ordenar un set y convertirlo en list de golpe).
+
+
+
+--------------------------------------------------------------------
+
+
+
+5. LIMPIAR ENTRADAS DE TEXTO
+
+   - Siempre que pidas texto por teclado, encadena .strip().upper():
+
+       texto = input("Dato: ").strip().upper()
+
+   - El .strip() borra espacios accidentales al principio o al final
+
+     (" ANA " -> "ANA") y te salva de falsos negativos al comparar.
+
+
+
+--------------------------------------------------------------------
+
+
+
+6. ESTRUCTURA MENTAL ANTES DE PICAR CODIGO (DIVIDE EN 3 BLOQUES)
+
+   [Bloque 1] Entrada y validacion
+
+              (while + try/except para numeros + .isalpha()/.isalnum() para texto).
+
+   [Bloque 2] Limpieza inicial
+
+              (set() para quitar repetidos, dict {} para pares clave-valor).
+
+   [Bloque 3] Logica principal en funcion
+
+              (def mi_funcion(...): con parametros y return claros).
+
+
+
+====================================================================
+nombre: str = ""
+alumnos: list[str] = []
+
+while nombre != "FIN":
+    nombre = input("Introduce tu nombre (o 'FIN' para salir): ").strip().upper()
+    if nombre.isalpha() and nombre != "FIN":
+        if nombre not in alumnos:
+            alumnos.append(nombre)
+
+print("Alumnos registrados:", sorted(alumnos))
